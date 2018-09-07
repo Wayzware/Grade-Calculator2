@@ -26,19 +26,7 @@
     End Sub
 
     Private Sub ClassCB_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ClassCB.SelectedIndexChanged
-        Dim foundmatch As Boolean = False
-        ClassID = 0
-        Do While foundmatch = False And ClassCB.Text <> "Default"
-            If names(ClassID) = ClassCB.Text Then
-                foundmatch = True
-            ElseIf ClassID > 100 Then
-                MsgBox("Invalid class name, aborting", MsgBoxStyle.Critical, "Error")
-                Me.Close()
-            Else
-                ClassID = ClassID + 1
-            End If
-        Loop
-        SetCategories(ClassID)
+        Main.SelectionIndexChanged()
     End Sub
 
     Private Sub SelectFolderToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles SelectFolderToolStripMenuItem.Click
@@ -48,4 +36,5 @@
     Private Sub ButtonClear_Click(sender As Object, e As EventArgs) Handles ButtonClear.Click
         Main.ClearText()
     End Sub
+
 End Class

@@ -1,4 +1,5 @@
 ﻿Module Main
+    Dim version As String = "0.0.1"
     Dim ScaleID, ClassID As Integer
     Public names(1) As String
     Public values(1) As String
@@ -217,24 +218,20 @@
         End If
         Return errortf
     End Function
-    Private Sub ClassCB_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ClassCB.SelectedIndexChanged
+    Public Sub SelectionIndexChanged()
         Dim foundmatch As Boolean = False
         ClassID = 0
-        Do While foundmatch = False And ClassCB.Text <> "Default"
-            If names(ClassID) = ClassCB.Text Then
+        Do While foundmatch = False And Form1.ClassCB.Text <> "Default"
+            If names(ClassID) = Form1.ClassCB.Text Then
                 foundmatch = True
             ElseIf ClassID > 100 Then
                 MsgBox("Invalid class name, aborting", MsgBoxStyle.Critical, "Error")
-                Me.Close()
+                Form1.Close()
             Else
                 ClassID = ClassID + 1
             End If
         Loop
         SetCategories(ClassID)
-    End Sub
-
-    Private Sub SelectFolderToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles SelectFolderToolStripMenuItem.Click
-        DeleteClass.Show()
     End Sub
 
     Private Function exportgrade(grade)
@@ -278,11 +275,11 @@
         If ClassID <> 0 Then
             defaultID = False
         End If
-        TextBox6.ReadOnly = defaultID
-        TextBox7.ReadOnly = defaultID
-        TextBox8.ReadOnly = defaultID
-        TextBox9.ReadOnly = defaultID
-        TextBox10.ReadOnly = defaultID
+        Form1.TextBox6.ReadOnly = defaultID
+        Form1.TextBox7.ReadOnly = defaultID
+        Form1.TextBox8.ReadOnly = defaultID
+        Form1.TextBox9.ReadOnly = defaultID
+        Form1.TextBox10.ReadOnly = defaultID
         Form1.InW1.ReadOnly = defaultID
         Form1.InW2.ReadOnly = defaultID
         Form1.InW3.ReadOnly = defaultID
@@ -294,11 +291,11 @@
             categorynames(x) = values(30 + x + (ClassID - 1) * 35)
         Next
 
-        TextBox6.Text = categorynames(1)
-        TextBox7.Text = categorynames(2)
-        TextBox8.Text = categorynames(3)
-        TextBox9.Text = categorynames(4)
-        TextBox10.Text = categorynames(5)
+        Form1.TextBox6.Text = categorynames(1)
+        Form1.TextBox7.Text = categorynames(2)
+        Form1.TextBox8.Text = categorynames(3)
+        Form1.TextBox9.Text = categorynames(4)
+        Form1.TextBox10.Text = categorynames(5)
 
         Dim used(5) As Boolean
         For x = 1 To 5
@@ -326,33 +323,33 @@
     End Sub
 
     Private Sub enabletextboxes(usedc)
-        TextBox7.Visible = usedc(2)
-        In2.Visible = usedc(2)
+        Form1.TextBox7.Visible = usedc(2)
+        Form1.In2.Visible = usedc(2)
         Form1.InOut2.Visible = usedc(2)
-        InP2.Visible = usedc(2)
+        Form1.InP2.Visible = usedc(2)
         Form1.InW2.Visible = usedc(2)
-        Out2.Visible = usedc(2)
+        Form1.Out2.Visible = usedc(2)
 
-        TextBox8.Visible = usedc(3)
-        In3.Visible = usedc(3)
+        Form1.TextBox8.Visible = usedc(3)
+        Form1.In3.Visible = usedc(3)
         Form1.InOut3.Visible = usedc(3)
-        InP3.Visible = usedc(3)
+        Form1.InP3.Visible = usedc(3)
         Form1.InW3.Visible = usedc(3)
-        Out3.Visible = usedc(3)
+        Form1.Out3.Visible = usedc(3)
 
-        TextBox9.Visible = usedc(4)
-        In4.Visible = usedc(4)
+        Form1.TextBox9.Visible = usedc(4)
+        Form1.In4.Visible = usedc(4)
         Form1.InOut4.Visible = usedc(4)
-        InP4.Visible = usedc(4)
+        Form1.InP4.Visible = usedc(4)
         Form1.InW4.Visible = usedc(4)
-        Out4.Visible = usedc(4)
+        Form1.Out4.Visible = usedc(4)
 
-        TextBox10.Visible = usedc(5)
-        In5.Visible = usedc(5)
+        Form1.TextBox10.Visible = usedc(5)
+        Form1.In5.Visible = usedc(5)
         Form1.InOut5.Visible = usedc(5)
-        InP5.Visible = usedc(5)
+        Form1.InP5.Visible = usedc(5)
         Form1.InW5.Visible = usedc(5)
-        Out5.Visible = usedc(5)
+        Form1.Out5.Visible = usedc(5)
 
     End Sub
     Public Sub RefreshList()
