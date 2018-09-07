@@ -1,4 +1,6 @@
-# Grade-Calculator
-Jacob's Grade Calculator
+# Grade Calculator 2
+Wayzata20's Grade Calculator
 
-Currently being updated to version 3.0.0
+Currently in Alpha 0.0.1
+
+If you notice any bugs, please report them in issues!
