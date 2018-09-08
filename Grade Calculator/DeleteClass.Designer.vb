@@ -23,42 +23,42 @@ Partial Class DeleteClass
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DeleteClass))
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(12, 32)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(165, 21)
-        Me.ComboBox1.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(183, 30)
+        Me.Button1.Location = New System.Drawing.Point(183, 49)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(89, 23)
+        Me.Button1.Size = New System.Drawing.Size(99, 23)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Delete Class"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(12, 12)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(165, 95)
+        Me.ListBox1.TabIndex = 2
         '
         'DeleteClass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 88)
+        Me.ClientSize = New System.Drawing.Size(294, 120)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(310, 159)
+        Me.MinimumSize = New System.Drawing.Size(310, 159)
         Me.Name = "DeleteClass"
         Me.Text = "Delete Class"
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents ListBox1 As ListBox
 End Class

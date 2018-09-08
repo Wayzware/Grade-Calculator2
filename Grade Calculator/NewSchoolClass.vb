@@ -97,14 +97,8 @@ Public Class NewSchoolClass
         Next
         FileClose(1)
         MsgBox("File saved!", MsgBoxStyle.OkOnly, "Success")
-        Main.startup()
-        Main.Startup2()
-        Main.SetupClasses()
         Main.RefreshList()
         Me.Close()
     End Sub
 
-    Private Sub NewSchoolClass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

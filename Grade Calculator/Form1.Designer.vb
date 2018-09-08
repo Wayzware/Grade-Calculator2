@@ -73,7 +73,10 @@ Partial Class Form1
         Me.SelectFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RefreshClassListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GPACalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ComingSoonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -466,7 +469,7 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(583, 24)
@@ -504,11 +507,31 @@ Partial Class Form1
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
+        'ToolsToolStripMenuItem
+        '
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GPACalculatorToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
+        Me.ToolsToolStripMenuItem.Text = "Tools"
+        '
+        'GPACalculatorToolStripMenuItem
+        '
+        Me.GPACalculatorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ComingSoonToolStripMenuItem})
+        Me.GPACalculatorToolStripMenuItem.Name = "GPACalculatorToolStripMenuItem"
+        Me.GPACalculatorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GPACalculatorToolStripMenuItem.Text = "GPA Calculator"
+        '
         'InformationToolStripMenuItem
         '
         Me.InformationToolStripMenuItem.Name = "InformationToolStripMenuItem"
         Me.InformationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.InformationToolStripMenuItem.Text = "Information"
+        '
+        'ComingSoonToolStripMenuItem
+        '
+        Me.ComingSoonToolStripMenuItem.Name = "ComingSoonToolStripMenuItem"
+        Me.ComingSoonToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ComingSoonToolStripMenuItem.Text = "Coming Soon!"
         '
         'Form1
         '
@@ -588,4 +611,7 @@ Partial Class Form1
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents RefreshClassListToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GPACalculatorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ComingSoonToolStripMenuItem As ToolStripMenuItem
 End Class

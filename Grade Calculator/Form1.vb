@@ -10,11 +10,6 @@
     Private Sub AddClassToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddClassToolStripMenuItem.Click
         NewSchoolClass.Show()
     End Sub
-    Private Sub SelectFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectFolderToolStripMenuItem.MouseHover
-        For x = 1 To names.Length - 1
-            SelectFolderToolStripMenuItem.DropDownItems.Add(names(x))
-        Next
-    End Sub
     Private Sub RefreshClassListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshClassListToolStripMenuItem.Click
         startup()
         Startup2()
@@ -29,12 +24,19 @@
         Main.SelectionIndexChanged()
     End Sub
 
-    Private Sub SelectFolderToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles SelectFolderToolStripMenuItem.Click
-        DeleteClass.Show()
-    End Sub
-
     Private Sub ButtonClear_Click(sender As Object, e As EventArgs) Handles ButtonClear.Click
         Main.ClearText()
     End Sub
+    Public Sub classNamesInTS_Click(sender As Object, e As ToolStripItemClickedEventHandler)
+        If Main.isInNames(sender) Then
+            MessageBox.Show("Hi")
+        Else
+            MessageBox.Show("Bye")
+        End If
 
+    End Sub
+
+    Private Sub SelectFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectFolderToolStripMenuItem.Click
+        DeleteClass.Show()
+    End Sub
 End Class

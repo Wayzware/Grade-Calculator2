@@ -1,5 +1,5 @@
 ﻿Module Main
-    Dim version As String = "0.0.1"
+    Dim version As String = "0.2"
     Dim ScaleID, ClassID As Integer
     Public names(1) As String
     Public values(1) As String
@@ -357,4 +357,34 @@
         Startup2()
         SetupClasses()
     End Sub
+
+    Public Sub classNamesInTS_Click(sender As Object, e As ToolStripItemClickedEventHandler)
+        If isInNames(sender) Then
+            MessageBox.Show("Hi")
+        Else
+            MessageBox.Show("Bye")
+        End If
+
+    End Sub
+
+    Public Function isInNames(sender As Object)
+        Dim senderString = sender.ToString
+        Dim isIn As Boolean
+        isIn = False
+        For x = 0 To names.Length - 1
+            If senderString.Equals(names(x)) Then
+                isIn = True
+            End If
+        Next
+        Return isIn
+    End Function
+
+    Public Function returnNames()
+        Return names
+    End Function
+
+    Public Function returnDataDirectory()
+        Return datadirectory
+    End Function
+
 End Module
