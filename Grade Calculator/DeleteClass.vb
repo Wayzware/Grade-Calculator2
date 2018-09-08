@@ -4,6 +4,7 @@ Public Class DeleteClass
         For x = 1 To names.Length - 1
             ListBox1.Items.Add(names(x))
         Next
+
     End Sub
 
     Private Sub ClearClassList()
@@ -11,7 +12,7 @@ Public Class DeleteClass
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If getSelectedItems().length > 0 Then
+        If ListBox1.SelectedItem.ToString & "" <> "" Then
             If MsgBox("Are you sure you want to delete the grading scale for: " & ListBox1.SelectedItem & "?", MsgBoxStyle.YesNo, "Delete") = 6 Then
                 deleteFiles(ListBox1.SelectedItem)
                 Main.RefreshList()

@@ -39,4 +39,8 @@
     Private Sub SelectFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectFolderToolStripMenuItem.Click
         DeleteClass.Show()
     End Sub
+
+    Private Sub GPACalculatorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GPACalculatorToolStripMenuItem.Click
+        GPA.Show()
+    End Sub
 End Class

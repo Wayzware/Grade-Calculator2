@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -76,7 +76,6 @@ Partial Class Form1
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GPACalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ComingSoonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -516,7 +515,6 @@ Partial Class Form1
         '
         'GPACalculatorToolStripMenuItem
         '
-        Me.GPACalculatorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ComingSoonToolStripMenuItem})
         Me.GPACalculatorToolStripMenuItem.Name = "GPACalculatorToolStripMenuItem"
         Me.GPACalculatorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.GPACalculatorToolStripMenuItem.Text = "GPA Calculator"
@@ -526,12 +524,6 @@ Partial Class Form1
         Me.InformationToolStripMenuItem.Name = "InformationToolStripMenuItem"
         Me.InformationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.InformationToolStripMenuItem.Text = "Information"
-        '
-        'ComingSoonToolStripMenuItem
-        '
-        Me.ComingSoonToolStripMenuItem.Name = "ComingSoonToolStripMenuItem"
-        Me.ComingSoonToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ComingSoonToolStripMenuItem.Text = "Coming Soon!"
         '
         'Form1
         '
@@ -613,5 +605,4 @@ Partial Class Form1
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GPACalculatorToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ComingSoonToolStripMenuItem As ToolStripMenuItem
 End Class

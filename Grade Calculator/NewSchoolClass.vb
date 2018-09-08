@@ -101,4 +101,30 @@ Public Class NewSchoolClass
         Me.Close()
     End Sub
 
+    Private Sub DefaultButton_Click(sender As Object, e As EventArgs) Handles DefaultButton.Click
+        TextBox2.Text = 97
+        TextBox26.Text = 96.999
+        TextBox25.Text = 92.999
+        TextBox24.Text = 89.999
+        TextBox23.Text = 86.999
+        TextBox22.Text = 82.999
+        TextBox21.Text = 79.999
+        TextBox20.Text = 76.999
+        TextBox19.Text = 72.999
+        TextBox18.Text = 69.999
+        TextBox17.Text = 66.999
+        TextBox16.Text = 62.999
+        TextBox15.Text = 59.999
+        TextBox3.Text = 93
+        TextBox4.Text = 90
+        TextBox5.Text = 87
+        TextBox6.Text = 83
+        TextBox7.Text = 80
+        TextBox8.Text = 77
+        TextBox9.Text = 73
+        TextBox10.Text = 70
+        TextBox11.Text = 67
+        TextBox12.Text = 63
+        TextBox13.Text = 60
+    End Sub
 End Class

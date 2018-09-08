@@ -1,5 +1,5 @@
 ﻿Module Main
-    Dim version As String = "0.2"
+    Public version As String = "0.3"
     Dim ScaleID, ClassID As Integer
     Public names(1) As String
     Public values(1) As String
