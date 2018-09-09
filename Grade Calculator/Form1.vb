@@ -11,9 +11,9 @@
         NewSchoolClass.Show()
     End Sub
     Private Sub RefreshClassListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshClassListToolStripMenuItem.Click
-        startup()
-        Startup2()
-        SetupClasses()
+        Main.startup()
+        Main.Startup2()
+        Main.SetupClasses()
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
@@ -26,14 +26,6 @@
 
     Private Sub ButtonClear_Click(sender As Object, e As EventArgs) Handles ButtonClear.Click
         Main.ClearText()
-    End Sub
-    Public Sub classNamesInTS_Click(sender As Object, e As ToolStripItemClickedEventHandler)
-        If Main.isInNames(sender) Then
-            MessageBox.Show("Hi")
-        Else
-            MessageBox.Show("Bye")
-        End If
-
     End Sub
 
     Private Sub SelectFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectFolderToolStripMenuItem.Click

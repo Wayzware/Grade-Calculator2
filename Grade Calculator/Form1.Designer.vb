@@ -540,7 +540,7 @@ Partial Class Form1
         Me.MaximumSize = New System.Drawing.Size(599, 284)
         Me.MinimumSize = New System.Drawing.Size(599, 284)
         Me.Name = "Form1"
-        Me.Text = "Grade Calculator"
+        Me.Text = "Grade Calculator 2"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

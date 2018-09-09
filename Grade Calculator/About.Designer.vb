@@ -31,11 +31,11 @@ Partial Class About
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(95, 9)
+        Me.Label2.Location = New System.Drawing.Point(78, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(111, 15)
+        Me.Label2.Size = New System.Drawing.Size(143, 15)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "© 2018 Jacob Rice"
+        Me.Label2.Text = "© 2016-2018 Jacob Rice"
         '
         'Label1
         '

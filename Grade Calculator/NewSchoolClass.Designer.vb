@@ -26,6 +26,7 @@ Partial Class NewSchoolClass
         Me.subjectNameTxt = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.DefaultButton = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -87,7 +88,6 @@ Partial Class NewSchoolClass
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DefaultButton = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -158,6 +158,15 @@ Partial Class NewSchoolClass
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Grade Scale"
+        '
+        'DefaultButton
+        '
+        Me.DefaultButton.Location = New System.Drawing.Point(6, 370)
+        Me.DefaultButton.Name = "DefaultButton"
+        Me.DefaultButton.Size = New System.Drawing.Size(119, 23)
+        Me.DefaultButton.TabIndex = 500
+        Me.DefaultButton.Text = "Use WHS Default"
+        Me.DefaultButton.UseVisualStyleBackColor = True
         '
         'Label15
         '
@@ -717,15 +726,6 @@ Partial Class NewSchoolClass
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(113, 20)
         Me.TextBox1.TabIndex = 0
-        '
-        'DefaultButton
-        '
-        Me.DefaultButton.Location = New System.Drawing.Point(6, 370)
-        Me.DefaultButton.Name = "DefaultButton"
-        Me.DefaultButton.Size = New System.Drawing.Size(119, 23)
-        Me.DefaultButton.TabIndex = 6
-        Me.DefaultButton.Text = "Use WHS Default"
-        Me.DefaultButton.UseVisualStyleBackColor = True
         '
         'NewSchoolClass
         '

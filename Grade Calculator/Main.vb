@@ -1,5 +1,5 @@
 ﻿Module Main
-    Public version As String = "0.3"
+    Public version As String = "0.4"
     Dim ScaleID, ClassID As Integer
     Public names(1) As String
     Public values(1) As String
@@ -356,15 +356,6 @@
         startup()
         Startup2()
         SetupClasses()
-    End Sub
-
-    Public Sub classNamesInTS_Click(sender As Object, e As ToolStripItemClickedEventHandler)
-        If isInNames(sender) Then
-            MessageBox.Show("Hi")
-        Else
-            MessageBox.Show("Bye")
-        End If
-
     End Sub
 
     Public Function isInNames(sender As Object)
