@@ -143,7 +143,7 @@
     Public Sub startup()
         If Not My.Computer.FileSystem.DirectoryExists(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\Grade Calculator\Classes\") Then
             My.Computer.FileSystem.CreateDirectory(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\Grade Calculator\Classes\")
-            MsgBox("No grading scales were found", MsgBoxStyle.Exclamation, "Grade Calculator")
+            MsgBox("No grading scales were found. You can add some by going to File -> Add Class", MsgBoxStyle.Exclamation, "Grade Calculator")
             Exit Sub
         End If
         datadirectory = (My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\Grade Calculator\Classes\")
@@ -152,6 +152,8 @@
             getDataFromGCD(filesgcd)
             exportnames()
             exportvalues()
+        Else
+            MsgBox("No grading scales were found. You can add some by going to File -> Add Class", MsgBoxStyle.Exclamation, "Grade Calculator")
         End If
     End Sub
 
@@ -377,5 +379,13 @@
     Public Function returnDataDirectory()
         Return datadirectory
     End Function
+
+    Public Sub Lock()
+
+    End Sub
+
+    Public Sub Unlock()
+
+    End Sub
 
 End Module

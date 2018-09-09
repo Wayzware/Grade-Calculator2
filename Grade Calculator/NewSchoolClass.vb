@@ -12,18 +12,18 @@ Public Class NewSchoolClass
     Private Sub gatherdata()
         values(1) = subjectNameTxt.Text
         values(2) = TextBox2.Text
-        values(3) = TextBox26.Text
-        values(4) = TextBox25.Text
-        values(5) = TextBox24.Text
-        values(6) = TextBox23.Text
-        values(7) = TextBox22.Text
-        values(8) = TextBox21.Text
-        values(9) = TextBox20.Text
-        values(10) = TextBox19.Text
-        values(11) = TextBox18.Text
-        values(12) = TextBox17.Text
-        values(13) = TextBox16.Text
-        values(14) = TextBox15.Text
+        values(3) = TextBox2.Text - 0.0001
+        values(4) = TextBox3.Text - 0.0001
+        values(5) = TextBox4.Text - 0.0001
+        values(6) = TextBox5.Text - 0.0001
+        values(7) = TextBox6.Text - 0.0001
+        values(8) = TextBox7.Text - 0.0001
+        values(9) = TextBox8.Text - 0.0001
+        values(10) = TextBox9.Text - 0.0001
+        values(11) = TextBox10.Text - 0.0001
+        values(12) = TextBox11.Text - 0.0001
+        values(13) = TextBox12.Text - 0.0001
+        values(14) = TextBox13.Text - 0.0001
         values(15) = TextBox3.Text
         values(16) = TextBox4.Text
         values(17) = TextBox5.Text
@@ -103,18 +103,6 @@ Public Class NewSchoolClass
 
     Private Sub DefaultButton_Click(sender As Object, e As EventArgs) Handles DefaultButton.Click
         TextBox2.Text = 97
-        TextBox26.Text = 96.999
-        TextBox25.Text = 92.999
-        TextBox24.Text = 89.999
-        TextBox23.Text = 86.999
-        TextBox22.Text = 82.999
-        TextBox21.Text = 79.999
-        TextBox20.Text = 76.999
-        TextBox19.Text = 72.999
-        TextBox18.Text = 69.999
-        TextBox17.Text = 66.999
-        TextBox16.Text = 62.999
-        TextBox15.Text = 59.999
         TextBox3.Text = 93
         TextBox4.Text = 90
         TextBox5.Text = 87
@@ -126,5 +114,21 @@ Public Class NewSchoolClass
         TextBox11.Text = 67
         TextBox12.Text = 63
         TextBox13.Text = 60
+    End Sub
+
+    Private Sub LangDefaultButton_Click(sender As Object, e As EventArgs) Handles LangDefaultButton.Click
+        'TextBox2.Text = 97
+        'TextBox3.Text = 93
+        'TextBox4.Text = 90
+        'TextBox5.Text = 87
+        'TextBox6.Text = 83
+        'TextBox7.Text = 80
+        'TextBox8.Text = 77
+        'TextBox9.Text = 73
+        'TextBox10.Text = 70
+        'TextBox11.Text = 67
+        'TextBox12.Text = 63
+        'TextBox13.Text = 60
+        MsgBox("To be added soon", MsgBoxStyle.OkOnly, "Not yet implemented")
     End Sub
 End Class
