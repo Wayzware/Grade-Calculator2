@@ -1,6 +1,6 @@
 # Grade Calculator 2
 Wayzata20's Grade Calculator
 
-Currently in version 0.2
+Currently in version 0.3
 
 If you notice any bugs, please report them in issues!
