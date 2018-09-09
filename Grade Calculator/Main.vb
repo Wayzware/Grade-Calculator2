@@ -1,5 +1,5 @@
 ﻿Module Main
-    Public version As String = "0.4"
+    Public version As String = "0.5"
     Dim ScaleID, ClassID As Integer
     Public names(1) As String
     Public values(1) As String
@@ -7,6 +7,8 @@
     Public datadirectory As String
     Public filenames(1), filesgcd(1), gcddata(1) As String
     Public gcdfiles, counter3 As Integer
+    Public categoryID As Integer
+    Public addPointsWindows(0) As Form
     Sub Calculate()
         Dim enabled(5) As Boolean
         Dim Input(5), InputOut(5), Percentages(5), Weights(5), Worth(5) As Single
@@ -222,6 +224,7 @@
     End Function
     Public Sub SelectionIndexChanged()
         Dim foundmatch As Boolean = False
+        Dim oldClassID = ClassID
         ClassID = 0
         Do While foundmatch = False And Form1.ClassCB.Text <> "Default"
             If names(ClassID) = Form1.ClassCB.Text Then
@@ -234,6 +237,11 @@
             End If
         Loop
         SetCategories(ClassID)
+
+        If ClassID <> oldClassID Then
+            closeAllAddPoints()
+        End If
+
     End Sub
 
     Private Function exportgrade(grade)
@@ -331,6 +339,7 @@
         Form1.InP2.Visible = usedc(2)
         Form1.InW2.Visible = usedc(2)
         Form1.Out2.Visible = usedc(2)
+        Form1.Button2.Visible = usedc(2)
 
         Form1.TextBox8.Visible = usedc(3)
         Form1.In3.Visible = usedc(3)
@@ -338,6 +347,7 @@
         Form1.InP3.Visible = usedc(3)
         Form1.InW3.Visible = usedc(3)
         Form1.Out3.Visible = usedc(3)
+        Form1.Button3.Visible = usedc(3)
 
         Form1.TextBox9.Visible = usedc(4)
         Form1.In4.Visible = usedc(4)
@@ -345,6 +355,7 @@
         Form1.InP4.Visible = usedc(4)
         Form1.InW4.Visible = usedc(4)
         Form1.Out4.Visible = usedc(4)
+        Form1.Button4.Visible = usedc(4)
 
         Form1.TextBox10.Visible = usedc(5)
         Form1.In5.Visible = usedc(5)
@@ -352,6 +363,7 @@
         Form1.InP5.Visible = usedc(5)
         Form1.InW5.Visible = usedc(5)
         Form1.Out5.Visible = usedc(5)
+        Form1.Button5.Visible = usedc(5)
 
     End Sub
     Public Sub RefreshList()
@@ -386,6 +398,74 @@
 
     Public Sub Unlock()
 
+    End Sub
+
+    Public Sub addPoints(ID As Integer, pointsEntered As Double, pointsPossible As Double)
+        Dim PointsTB, OutOfTB As TextBox
+        If ID = 1 Then
+            PointsTB = Form1.In1
+            OutOfTB = Form1.InOut1
+        ElseIf ID = 2 Then
+            PointsTB = Form1.In2
+            OutOfTB = Form1.InOut2
+        ElseIf ID = 3 Then
+            PointsTB = Form1.In3
+            OutOfTB = Form1.InOut3
+        ElseIf ID = 4 Then
+            PointsTB = Form1.In4
+            OutOfTB = Form1.InOut4
+        ElseIf ID = 5 Then
+            PointsTB = Form1.In5
+            OutOfTB = Form1.InOut5
+        Else
+            'Error message here
+            Exit Sub
+        End If
+
+        Dim Points, OutOf As Double
+
+        Points = Val(PointsTB.Text)
+        OutOf = Val(OutOfTB.Text)
+
+        Points += pointsEntered
+        OutOf += pointsPossible
+
+        PointsTB.Text = Points
+        OutOfTB.Text = OutOf
+
+    End Sub
+
+    Public Sub setCatID(ID As Integer)
+        categoryID = ID
+    End Sub
+
+    Public Function returnCatID()
+        Return categoryID
+    End Function
+
+    Public Sub openAddPoints(ID As Integer)
+        categoryID = ID
+
+        Dim AddPointsWindowsNew(addPointsWindows.Length + 1) As Form
+
+        For x = 0 To addPointsWindows.Length - 1
+            AddPointsWindowsNew(x) = addPointsWindows(x)
+        Next
+
+        AddPointsWindowsNew(addPointsWindows.Length - 1) = New AddPoints()
+
+        AddPointsWindowsNew(addPointsWindows.Length - 1).Show()
+
+        addPointsWindows = AddPointsWindowsNew
+
+    End Sub
+
+    Public Sub closeAllAddPoints()
+        For Each i In addPointsWindows
+            If Not IsNothing(i) Then
+                i.Close()
+            End If
+        Next
     End Sub
 
 End Module

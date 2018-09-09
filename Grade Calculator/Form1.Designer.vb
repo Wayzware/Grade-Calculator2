@@ -76,6 +76,11 @@ Partial Class Form1
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GPACalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -83,6 +88,11 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button5)
+        Me.GroupBox1.Controls.Add(Me.Button4)
+        Me.GroupBox1.Controls.Add(Me.Button3)
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.TextBox10)
         Me.GroupBox1.Controls.Add(Me.TextBox9)
         Me.GroupBox1.Controls.Add(Me.TextBox8)
@@ -166,7 +176,7 @@ Partial Class Form1
         '
         'InP5
         '
-        Me.InP5.Location = New System.Drawing.Point(228, 134)
+        Me.InP5.Location = New System.Drawing.Point(244, 134)
         Me.InP5.Name = "InP5"
         Me.InP5.ReadOnly = True
         Me.InP5.Size = New System.Drawing.Size(39, 20)
@@ -181,7 +191,7 @@ Partial Class Form1
         '
         'InOut5
         '
-        Me.InOut5.Location = New System.Drawing.Point(180, 134)
+        Me.InOut5.Location = New System.Drawing.Point(196, 134)
         Me.InOut5.Name = "InOut5"
         Me.InOut5.Size = New System.Drawing.Size(39, 20)
         Me.InOut5.TabIndex = 21
@@ -196,7 +206,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(225, 15)
+        Me.Label4.Location = New System.Drawing.Point(241, 15)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 13)
         Me.Label4.TabIndex = 19
@@ -204,7 +214,7 @@ Partial Class Form1
         '
         'InP4
         '
-        Me.InP4.Location = New System.Drawing.Point(228, 108)
+        Me.InP4.Location = New System.Drawing.Point(244, 108)
         Me.InP4.Name = "InP4"
         Me.InP4.ReadOnly = True
         Me.InP4.Size = New System.Drawing.Size(39, 20)
@@ -212,7 +222,7 @@ Partial Class Form1
         '
         'InP3
         '
-        Me.InP3.Location = New System.Drawing.Point(228, 83)
+        Me.InP3.Location = New System.Drawing.Point(244, 83)
         Me.InP3.Name = "InP3"
         Me.InP3.ReadOnly = True
         Me.InP3.Size = New System.Drawing.Size(39, 20)
@@ -220,7 +230,7 @@ Partial Class Form1
         '
         'InP2
         '
-        Me.InP2.Location = New System.Drawing.Point(228, 57)
+        Me.InP2.Location = New System.Drawing.Point(244, 57)
         Me.InP2.Name = "InP2"
         Me.InP2.ReadOnly = True
         Me.InP2.Size = New System.Drawing.Size(39, 20)
@@ -228,7 +238,7 @@ Partial Class Form1
         '
         'InP1
         '
-        Me.InP1.Location = New System.Drawing.Point(228, 31)
+        Me.InP1.Location = New System.Drawing.Point(244, 31)
         Me.InP1.Name = "InP1"
         Me.InP1.ReadOnly = True
         Me.InP1.Size = New System.Drawing.Size(39, 20)
@@ -246,7 +256,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(181, 15)
+        Me.Label2.Location = New System.Drawing.Point(197, 15)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(38, 13)
         Me.Label2.TabIndex = 13
@@ -270,7 +280,7 @@ Partial Class Form1
         '
         'InOut4
         '
-        Me.InOut4.Location = New System.Drawing.Point(180, 108)
+        Me.InOut4.Location = New System.Drawing.Point(196, 108)
         Me.InOut4.Name = "InOut4"
         Me.InOut4.Size = New System.Drawing.Size(39, 20)
         Me.InOut4.TabIndex = 10
@@ -291,7 +301,7 @@ Partial Class Form1
         '
         'InOut3
         '
-        Me.InOut3.Location = New System.Drawing.Point(180, 82)
+        Me.InOut3.Location = New System.Drawing.Point(196, 82)
         Me.InOut3.Name = "InOut3"
         Me.InOut3.Size = New System.Drawing.Size(39, 20)
         Me.InOut3.TabIndex = 7
@@ -312,7 +322,7 @@ Partial Class Form1
         '
         'InOut2
         '
-        Me.InOut2.Location = New System.Drawing.Point(180, 56)
+        Me.InOut2.Location = New System.Drawing.Point(196, 56)
         Me.InOut2.Name = "InOut2"
         Me.InOut2.Size = New System.Drawing.Size(39, 20)
         Me.InOut2.TabIndex = 4
@@ -333,7 +343,7 @@ Partial Class Form1
         '
         'InOut1
         '
-        Me.InOut1.Location = New System.Drawing.Point(180, 30)
+        Me.InOut1.Location = New System.Drawing.Point(196, 30)
         Me.InOut1.Name = "InOut1"
         Me.InOut1.Size = New System.Drawing.Size(39, 20)
         Me.InOut1.TabIndex = 1
@@ -485,25 +495,25 @@ Partial Class Form1
         'AddClassToolStripMenuItem
         '
         Me.AddClassToolStripMenuItem.Name = "AddClassToolStripMenuItem"
-        Me.AddClassToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.AddClassToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AddClassToolStripMenuItem.Text = "Add Class"
         '
         'SelectFolderToolStripMenuItem
         '
         Me.SelectFolderToolStripMenuItem.Name = "SelectFolderToolStripMenuItem"
-        Me.SelectFolderToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.SelectFolderToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SelectFolderToolStripMenuItem.Text = "Remove Class"
         '
         'RefreshClassListToolStripMenuItem
         '
         Me.RefreshClassListToolStripMenuItem.Name = "RefreshClassListToolStripMenuItem"
-        Me.RefreshClassListToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.RefreshClassListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.RefreshClassListToolStripMenuItem.Text = "Refresh Class List"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'ToolsToolStripMenuItem
@@ -525,6 +535,56 @@ Partial Class Form1
         Me.InformationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.InformationToolStripMenuItem.Text = "Information"
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(170, 30)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(20, 20)
+        Me.Button1.TabIndex = 30
+        Me.Button1.Text = "+"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(170, 57)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(20, 20)
+        Me.Button2.TabIndex = 31
+        Me.Button2.Text = "+"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(170, 83)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(20, 20)
+        Me.Button3.TabIndex = 32
+        Me.Button3.Text = "+"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(170, 107)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(20, 20)
+        Me.Button4.TabIndex = 33
+        Me.Button4.Text = "+"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(170, 133)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(20, 20)
+        Me.Button5.TabIndex = 34
+        Me.Button5.Text = "+"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -537,6 +597,7 @@ Partial Class Form1
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(599, 284)
         Me.MinimumSize = New System.Drawing.Size(599, 284)
         Me.Name = "Form1"
@@ -605,4 +666,9 @@ Partial Class Form1
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GPACalculatorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class

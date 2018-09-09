@@ -594,6 +594,7 @@ Partial Class NewSchoolClass
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.MinimumSize = New System.Drawing.Size(340, 505)
         Me.Name = "NewSchoolClass"
         Me.Text = "New Class"

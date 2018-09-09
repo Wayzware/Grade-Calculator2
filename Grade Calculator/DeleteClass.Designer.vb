@@ -52,6 +52,7 @@ Partial Class DeleteClass
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(310, 159)
         Me.MinimumSize = New System.Drawing.Size(310, 159)
         Me.Name = "DeleteClass"
