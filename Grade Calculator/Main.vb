@@ -1,5 +1,5 @@
 ﻿Module Main
-    Public version As String = "0.5"
+    Public version As String = "0.6"
     Dim ScaleID, ClassID As Integer
     Public names(1) As String
     Public values(1) As String
@@ -10,8 +10,8 @@
     Public categoryID As Integer
     Public addPointsWindows(0) As Form
     Sub Calculate()
-        Dim enabled(5) As Boolean
-        Dim Input(5), InputOut(5), Percentages(5), Weights(5), Worth(5) As Single
+        'Dim enabled(10) As Boolean
+        Dim Input(10), InputOut(10), Percentages(10), Weights(10), Worth(10) As Single
         Dim entries As Integer
         entries = 0
         If Form1.In1.Text <> "" And Form1.InOut1.Text <> "" And Form1.InW1.Text <> "" Then
@@ -50,7 +50,7 @@
             entries += 1
         End If
         Dim total As Single
-        For x = 1 To 5
+        For x = 1 To 10
             Worth(x) = Weights(x) * Percentages(x) * 100
             total = total + Worth(x)
         Next
@@ -187,11 +187,11 @@
     Public Sub getDataFromGCD(files)
         Dim a As Integer
         a = 0
-        ReDim Preserve gcddata(gcdfiles * 35)
+        ReDim Preserve gcddata(gcdfiles * 45)
         Do Until a = gcdfiles
             a = a + 1
             FileOpen(1, filesgcd(a + 1), OpenMode.Input)
-            For x = (1 + 35 * (a - 1)) To (35 + 35 * (a - 1)) Step 1
+            For x = (1 + 45 * (a - 1)) To (45 + 45 * (a - 1)) Step 1
                 gcddata(x) = LineInput(1)
             Next
             FileClose(1)
@@ -201,7 +201,7 @@
         Dim counter As Integer
         counter = 0
         Do Until counter = gcdfiles
-            For runs = 1 To (gcdfiles * 35) Step 35
+            For runs = 1 To (gcdfiles * 45) Step 45
                 ReDim Preserve names(counter + 1)
                 names(counter + 1) = gcddata(runs)
                 counter = counter + 1
@@ -240,6 +240,7 @@
 
         If ClassID <> oldClassID Then
             closeAllAddPoints()
+            ClearText()
         End If
 
     End Sub
@@ -247,31 +248,31 @@
     Private Function exportgrade(grade)
         Dim lettergrade As String
         Select Case grade
-            Case >= values(2 + (ClassID - 1) * 35)
+            Case >= values(2 + (ClassID - 1) * 45)
                 lettergrade = "A+"
-            Case values(15 + (ClassID - 1) * 35) To values(3 + (ClassID - 1) * 35)
+            Case values(15 + (ClassID - 1) * 45) To values(3 + (ClassID - 1) * 45)
                 lettergrade = "A"
-            Case values(16 + (ClassID - 1) * 35) To values(4 + (ClassID - 1) * 35)
+            Case values(16 + (ClassID - 1) * 45) To values(4 + (ClassID - 1) * 45)
                 lettergrade = "A-"
-            Case values(17 + (ClassID - 1) * 35) To values(5 + (ClassID - 1) * 35)
+            Case values(17 + (ClassID - 1) * 45) To values(5 + (ClassID - 1) * 45)
                 lettergrade = "B+"
-            Case values(18 + (ClassID - 1) * 35) To values(6 + (ClassID - 1) * 35)
+            Case values(18 + (ClassID - 1) * 45) To values(6 + (ClassID - 1) * 45)
                 lettergrade = "B"
-            Case values(19 + (ClassID - 1) * 35) To values(7 + (ClassID - 1) * 35)
+            Case values(19 + (ClassID - 1) * 45) To values(7 + (ClassID - 1) * 45)
                 lettergrade = "B-"
-            Case values(20 + (ClassID - 1) * 35) To values(8 + (ClassID - 1) * 35)
+            Case values(20 + (ClassID - 1) * 45) To values(8 + (ClassID - 1) * 45)
                 lettergrade = "C+"
-            Case values(21 + (ClassID - 1) * 35) To values(9 + (ClassID - 1) * 35)
+            Case values(21 + (ClassID - 1) * 45) To values(9 + (ClassID - 1) * 45)
                 lettergrade = "C"
-            Case values(22 + (ClassID - 1) * 35) To values(10 + (ClassID - 1) * 35)
+            Case values(22 + (ClassID - 1) * 45) To values(10 + (ClassID - 1) * 45)
                 lettergrade = "C-"
-            Case values(23 + (ClassID - 1) * 35) To values(11 + (ClassID - 1) * 35)
+            Case values(23 + (ClassID - 1) * 45) To values(11 + (ClassID - 1) * 45)
                 lettergrade = "D+"
-            Case values(24 + (ClassID - 1) * 35) To values(12 + (ClassID - 1) * 35)
+            Case values(24 + (ClassID - 1) * 45) To values(12 + (ClassID - 1) * 45)
                 lettergrade = "D"
-            Case values(25 + (ClassID - 1) * 35) To values(13 + (ClassID - 1) * 35)
+            Case values(25 + (ClassID - 1) * 45) To values(13 + (ClassID - 1) * 45)
                 lettergrade = "D-"
-            Case <= values(14 + (ClassID - 1) * 35)
+            Case <= values(14 + (ClassID - 1) * 45)
                 lettergrade = "F"
             Case Else
                 lettergrade = "Unknown"
@@ -296,9 +297,9 @@
         Form1.InW4.ReadOnly = defaultID
         Form1.InW5.ReadOnly = defaultID
 
-        Dim categorynames(5) As String
-        For x = 1 To 5
-            categorynames(x) = values(30 + x + (ClassID - 1) * 35)
+        Dim categorynames(10) As String
+        For x = 1 To 10
+            categorynames(x) = values(30 + x + (ClassID - 1) * 45)
         Next
 
         Form1.TextBox6.Text = categorynames(1)
@@ -321,7 +322,7 @@
 
         Dim worth(5) As String
         For x = 1 To 5
-            worth(x) = values(25 + x + (ClassID - 1) * 35)
+            worth(x) = values(25 + x + (ClassID - 1) * 45)
         Next
 
         Form1.InW1.Text = worth(1)

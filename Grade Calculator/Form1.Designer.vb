@@ -81,6 +81,8 @@ Partial Class Form1
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.BackButton = New System.Windows.Forms.Button()
+        Me.ForwardButton = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -88,6 +90,8 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ForwardButton)
+        Me.GroupBox1.Controls.Add(Me.BackButton)
         Me.GroupBox1.Controls.Add(Me.Button5)
         Me.GroupBox1.Controls.Add(Me.Button4)
         Me.GroupBox1.Controls.Add(Me.Button3)
@@ -125,7 +129,7 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.In1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 27)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(335, 165)
+        Me.GroupBox1.Size = New System.Drawing.Size(335, 184)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Input"
@@ -369,7 +373,7 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.Out1)
         Me.GroupBox2.Location = New System.Drawing.Point(353, 27)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(218, 165)
+        Me.GroupBox2.Size = New System.Drawing.Size(218, 184)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Output"
@@ -459,7 +463,7 @@ Partial Class Form1
         '
         'ButtonClear
         '
-        Me.ButtonClear.Location = New System.Drawing.Point(12, 198)
+        Me.ButtonClear.Location = New System.Drawing.Point(12, 217)
         Me.ButtonClear.Name = "ButtonClear"
         Me.ButtonClear.Size = New System.Drawing.Size(335, 35)
         Me.ButtonClear.TabIndex = 2
@@ -468,7 +472,7 @@ Partial Class Form1
         '
         'ButtonCalculate
         '
-        Me.ButtonCalculate.Location = New System.Drawing.Point(353, 198)
+        Me.ButtonCalculate.Location = New System.Drawing.Point(353, 217)
         Me.ButtonCalculate.Name = "ButtonCalculate"
         Me.ButtonCalculate.Size = New System.Drawing.Size(218, 35)
         Me.ButtonCalculate.TabIndex = 3
@@ -585,11 +589,29 @@ Partial Class Form1
         Me.Button5.Text = "+"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'BackButton
+        '
+        Me.BackButton.Location = New System.Drawing.Point(6, 155)
+        Me.BackButton.Name = "BackButton"
+        Me.BackButton.Size = New System.Drawing.Size(50, 23)
+        Me.BackButton.TabIndex = 35
+        Me.BackButton.Text = "<--"
+        Me.BackButton.UseVisualStyleBackColor = True
+        '
+        'ForwardButton
+        '
+        Me.ForwardButton.Location = New System.Drawing.Point(57, 155)
+        Me.ForwardButton.Name = "ForwardButton"
+        Me.ForwardButton.Size = New System.Drawing.Size(50, 23)
+        Me.ForwardButton.TabIndex = 36
+        Me.ForwardButton.Text = "-->"
+        Me.ForwardButton.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(583, 245)
+        Me.ClientSize = New System.Drawing.Size(583, 259)
         Me.Controls.Add(Me.ButtonCalculate)
         Me.Controls.Add(Me.ButtonClear)
         Me.Controls.Add(Me.GroupBox2)
@@ -598,8 +620,8 @@ Partial Class Form1
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(599, 284)
-        Me.MinimumSize = New System.Drawing.Size(599, 284)
+        Me.MaximumSize = New System.Drawing.Size(599, 298)
+        Me.MinimumSize = New System.Drawing.Size(599, 298)
         Me.Name = "Form1"
         Me.Text = "Grade Calculator 2"
         Me.GroupBox1.ResumeLayout(False)
@@ -671,4 +693,6 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents ForwardButton As Button
+    Friend WithEvents BackButton As Button
 End Class

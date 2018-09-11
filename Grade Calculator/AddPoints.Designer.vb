@@ -30,6 +30,7 @@ Partial Class AddPoints
         Me.PointsPossibleTB = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.CategoryLabel = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -77,7 +78,7 @@ Partial Class AddPoints
         '
         Me.Button1.Location = New System.Drawing.Point(11, 90)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(168, 23)
+        Me.Button1.Size = New System.Drawing.Size(79, 23)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Add"
         Me.Button1.UseVisualStyleBackColor = True
@@ -91,11 +92,21 @@ Partial Class AddPoints
         Me.CategoryLabel.TabIndex = 6
         Me.CategoryLabel.Text = "{CATEGORY}"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(96, 90)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(79, 23)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Remove"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'AddPoints
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(188, 125)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.CategoryLabel)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
@@ -121,4 +132,5 @@ Partial Class AddPoints
     Friend WithEvents PointsPossibleTB As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents CategoryLabel As Label
+    Friend WithEvents Button2 As Button
 End Class

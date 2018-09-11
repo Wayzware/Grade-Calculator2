@@ -75,6 +75,8 @@ Partial Class NewSchoolClass
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.LangDefaultButton = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -378,6 +380,8 @@ Partial Class NewSchoolClass
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Button2)
+        Me.GroupBox3.Controls.Add(Me.Button1)
         Me.GroupBox3.Controls.Add(Me.Label24)
         Me.GroupBox3.Controls.Add(Me.Label22)
         Me.GroupBox3.Controls.Add(Me.TextBox33)
@@ -408,7 +412,7 @@ Partial Class NewSchoolClass
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(6, 356)
+        Me.Label24.Location = New System.Drawing.Point(7, 346)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(53, 13)
         Me.Label24.TabIndex = 9
@@ -417,7 +421,7 @@ Partial Class NewSchoolClass
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(6, 281)
+        Me.Label22.Location = New System.Drawing.Point(7, 271)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(53, 13)
         Me.Label22.TabIndex = 17
@@ -425,7 +429,7 @@ Partial Class NewSchoolClass
         '
         'TextBox33
         '
-        Me.TextBox33.Location = New System.Drawing.Point(80, 352)
+        Me.TextBox33.Location = New System.Drawing.Point(81, 342)
         Me.TextBox33.MaxLength = 6
         Me.TextBox33.Name = "TextBox33"
         Me.TextBox33.Size = New System.Drawing.Size(39, 20)
@@ -434,7 +438,7 @@ Partial Class NewSchoolClass
         '
         'TextBox31
         '
-        Me.TextBox31.Location = New System.Drawing.Point(80, 277)
+        Me.TextBox31.Location = New System.Drawing.Point(81, 267)
         Me.TextBox31.MaxLength = 6
         Me.TextBox31.Name = "TextBox31"
         Me.TextBox31.Size = New System.Drawing.Size(39, 20)
@@ -444,7 +448,7 @@ Partial Class NewSchoolClass
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(46, 309)
+        Me.Label25.Location = New System.Drawing.Point(47, 299)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(35, 13)
         Me.Label25.TabIndex = 7
@@ -453,7 +457,7 @@ Partial Class NewSchoolClass
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(46, 234)
+        Me.Label23.Location = New System.Drawing.Point(47, 224)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(35, 13)
         Me.Label23.TabIndex = 15
@@ -461,14 +465,14 @@ Partial Class NewSchoolClass
         '
         'TextBox34
         '
-        Me.TextBox34.Location = New System.Drawing.Point(6, 326)
+        Me.TextBox34.Location = New System.Drawing.Point(7, 316)
         Me.TextBox34.Name = "TextBox34"
         Me.TextBox34.Size = New System.Drawing.Size(113, 20)
         Me.TextBox34.TabIndex = 8
         '
         'TextBox32
         '
-        Me.TextBox32.Location = New System.Drawing.Point(6, 251)
+        Me.TextBox32.Location = New System.Drawing.Point(7, 241)
         Me.TextBox32.Name = "TextBox32"
         Me.TextBox32.Size = New System.Drawing.Size(113, 20)
         Me.TextBox32.TabIndex = 6
@@ -476,7 +480,7 @@ Partial Class NewSchoolClass
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(9, 212)
+        Me.Label20.Location = New System.Drawing.Point(10, 202)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(53, 13)
         Me.Label20.TabIndex = 13
@@ -484,7 +488,7 @@ Partial Class NewSchoolClass
         '
         'TextBox29
         '
-        Me.TextBox29.Location = New System.Drawing.Point(83, 208)
+        Me.TextBox29.Location = New System.Drawing.Point(84, 198)
         Me.TextBox29.MaxLength = 6
         Me.TextBox29.Name = "TextBox29"
         Me.TextBox29.Size = New System.Drawing.Size(39, 20)
@@ -494,7 +498,7 @@ Partial Class NewSchoolClass
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(49, 165)
+        Me.Label21.Location = New System.Drawing.Point(50, 155)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(35, 13)
         Me.Label21.TabIndex = 11
@@ -502,7 +506,7 @@ Partial Class NewSchoolClass
         '
         'TextBox30
         '
-        Me.TextBox30.Location = New System.Drawing.Point(9, 182)
+        Me.TextBox30.Location = New System.Drawing.Point(10, 172)
         Me.TextBox30.Name = "TextBox30"
         Me.TextBox30.Size = New System.Drawing.Size(113, 20)
         Me.TextBox30.TabIndex = 4
@@ -510,7 +514,7 @@ Partial Class NewSchoolClass
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(6, 144)
+        Me.Label18.Location = New System.Drawing.Point(7, 134)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(53, 13)
         Me.Label18.TabIndex = 9
@@ -518,7 +522,7 @@ Partial Class NewSchoolClass
         '
         'TextBox27
         '
-        Me.TextBox27.Location = New System.Drawing.Point(80, 140)
+        Me.TextBox27.Location = New System.Drawing.Point(81, 130)
         Me.TextBox27.MaxLength = 6
         Me.TextBox27.Name = "TextBox27"
         Me.TextBox27.Size = New System.Drawing.Size(39, 20)
@@ -528,7 +532,7 @@ Partial Class NewSchoolClass
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(46, 97)
+        Me.Label19.Location = New System.Drawing.Point(47, 87)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(35, 13)
         Me.Label19.TabIndex = 7
@@ -536,7 +540,7 @@ Partial Class NewSchoolClass
         '
         'TextBox28
         '
-        Me.TextBox28.Location = New System.Drawing.Point(6, 114)
+        Me.TextBox28.Location = New System.Drawing.Point(7, 104)
         Me.TextBox28.Name = "TextBox28"
         Me.TextBox28.Size = New System.Drawing.Size(113, 20)
         Me.TextBox28.TabIndex = 2
@@ -544,7 +548,7 @@ Partial Class NewSchoolClass
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(6, 73)
+        Me.Label17.Location = New System.Drawing.Point(7, 63)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(53, 13)
         Me.Label17.TabIndex = 5
@@ -552,7 +556,7 @@ Partial Class NewSchoolClass
         '
         'TextBox14
         '
-        Me.TextBox14.Location = New System.Drawing.Point(80, 69)
+        Me.TextBox14.Location = New System.Drawing.Point(81, 59)
         Me.TextBox14.MaxLength = 6
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(39, 20)
@@ -562,7 +566,7 @@ Partial Class NewSchoolClass
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(46, 26)
+        Me.Label16.Location = New System.Drawing.Point(47, 16)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(35, 13)
         Me.Label16.TabIndex = 1
@@ -570,7 +574,7 @@ Partial Class NewSchoolClass
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(6, 43)
+        Me.TextBox1.Location = New System.Drawing.Point(7, 33)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(113, 20)
         Me.TextBox1.TabIndex = 0
@@ -583,6 +587,24 @@ Partial Class NewSchoolClass
         Me.LangDefaultButton.TabIndex = 501
         Me.LangDefaultButton.Text = "Use Lang. Default"
         Me.LangDefaultButton.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(6, 370)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(57, 23)
+        Me.Button1.TabIndex = 18
+        Me.Button1.Text = "<--"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(66, 370)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(59, 23)
+        Me.Button2.TabIndex = 19
+        Me.Button2.Text = "-->"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'NewSchoolClass
         '
@@ -660,4 +682,6 @@ Partial Class NewSchoolClass
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents DefaultButton As Button
     Friend WithEvents LangDefaultButton As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class

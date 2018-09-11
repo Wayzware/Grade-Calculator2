@@ -26,4 +26,8 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Main.addPoints(ID, Val(PointsEarnedTB.Text), Val(PointsPossibleTB.Text))
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Main.addPoints(ID, (-1) * Val(PointsEarnedTB.Text), (-1) * Val(PointsPossibleTB.Text))
+    End Sub
 End Class
